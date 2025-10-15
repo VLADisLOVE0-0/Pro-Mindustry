@@ -1,0 +1,184 @@
+.guides-page {
+    margin-top: 80px;
+    background: radial-gradient(circle at center, #111 0%, #0a0a0a 100%);
+    color: #fff;
+    font-family: 'Cornerita', sans-serif;
+}
+
+/* ======= ВСТУПИТЕЛЬНЫЙ БЛОК ======= */
+.guides-intro {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/bg-guides.jpg') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.guides-intro::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.4), #0a0a0a 90%);
+}
+
+.guides-intro-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.guides-heading {
+    font-size: 3.2em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #bf953f, #fcf6ba, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(255,215,0,0.2);
+}
+
+.guides-text {
+    font-size: 1.3em;
+    color: #ccc;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ======= СЕКЦИЯ С КАРТОЧКАМИ ======= */
+.guides-collection {
+    padding: 100px 6vw;
+    text-align: center;
+    position: relative;
+}
+
+.guides-section-title {
+    font-size: 2.6em;
+    font-weight: 900;
+    margin-bottom: 60px;
+    background: linear-gradient(45deg, #bf953f, #fcf6ba, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ======= КАРТОЧКИ ======= */
+.guides-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.guide-tile {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.4s ease;
+    box-shadow: 0 0 25px rgba(255,215,0,0.05);
+}
+
+.guide-tile:hover {
+    transform: scale(1.03);
+    border-color: #ffd700;
+    box-shadow: 0 0 40px rgba(255,215,0,0.4);
+}
+
+/* Фон */
+.tile-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+    transition: all 0.6s ease;
+}
+
+.guide-tile:hover .tile-bg {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+/* Оверлей */
+.tile-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 1;
+}
+
+/* Контент */
+.tile-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding: 25px;
+    text-align: left;
+}
+
+.tile-content h3 {
+    font-size: 1.6em;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #ffd700;
+}
+
+.tile-content p {
+    font-size: 1.05em;
+    color: #ddd;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Теги */
+.tile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tile-tags span {
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #fff;
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+}
+
+.tile-tags span:hover {
+    background: rgba(255,215,0,0.4);
+}
+
+/* ======= АДАПТИВ ======= */
+@media (max-width: 768px) {
+    .guides-intro {
+        height: 45vh;
+    }
+
+    .guides-heading {
+        font-size: 2.4em;
+    }
+
+    .guides-text {
+        font-size: 1.1em;
+    }
+
+    .guide-tile {
+        height: 320px;
+    }
+
+    .tile-content h3 {
+        font-size: 1.4em;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/news.css">
+    <title>Новости | Pro Mindustry</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo"><img src="../images/mindustry-logo.png" alt="Логотип игры Mindustry" class="mindustry-logo">Pro Mindustry</a>
+
+        <button class="menu-toggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="guides.html">Гайды</a></li>
+                <li class="nav-item"><a href="characters.html">Юниты</a></li>
+                <li class="nav-item"><a href="media.html">Медиа</a></li>
+                <li class="nav-item"><a href="community.html ">Сообщество</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="news-page">
+            <div class="container">
+                <h1 class="page-title">Последние новости</h1>
+                
+                <!-- Фильтры по категориям -->
+                <div class="news-filters">
+                    <button class="filter-btn active" data-filter="all">Все новости</button>
+                    <button class="filter-btn" data-filter="patches">Патчи</button>
+                    <button class="filter-btn" data-filter="events">События</button>
+                    <button class="filter-btn" data-filter="tournaments">Турниры</button>
+                </div>
+                
+                <!-- Список новостей -->
+                <div class="news-list">
+                    <!-- Новость 1 -->
+                    <div class="news-item" data-category="patches">
+                        <img src="../images/index-news-v7.jpg" alt="Обновление Mindustry 7.0" class="news-img">
+                        <div class="news-content">
+                            <div class="news-date">15 октября 2023</div>
+                            <h3 class="news-headline">Обновление Mindustry 7.0</h3>
+                            <p class="news-excerpt">Вышло крупное обновление игры с новыми механиками, блоками и улучшенной графикой. Добавлены новые карты и враги.</p>
+                            <a href="#" class="read-more">Читать дальше</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Новость 2 -->
+                    <div class="news-item" data-category="events">
+                        <img src="../images/index-news-map&mods.png" alt="Новые карты и моды" class="news-img">
+                        <div class="news-content">
+                            <div class="news-date">10 октября 2023</div>
+                            <h3 class="news-headline">Новые карты и моды</h3>
+                            <p class="news-excerpt">Сообщество разработчиков представило несколько интересных карт и модификаций, которые расширяют игровой процесс.</p>
+                            <a href="#" class="read-more">Читать дальше</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Новость 3 -->
+                    <div class="news-item" data-category="events">
+                        <img src="../images/index-news-guide-auto.webp" alt="Гайд по автоматизации" class="news-img">
+                        <div class="news-content">
+                            <div class="news-date">5 октября 2023</div>
+                            <h3 class="news-headline">Гайд по автоматизации</h3>
+                            <p class="news-excerpt">Опубликовано подробное руководство по созданию эффективных фабрик и систем обороны для начинающих игроков.</p>
+                            <a href="#" class="read-more">Читать дальше</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Новость 4 -->
+                    <div class="news-item" data-category="tournaments">
+                        <img src="../images/index-news-tournament.jpg" alt="Сообщество и турниры" class="news-img">
+                        <div class="news-content">
+                            <div class="news-date">1 октября 2023</div>
+                            <h3 class="news-headline">Сообщество и турниры</h3>
+                            <p class="news-excerpt">Анонсированы новые соревнования и события для игроков Mindustry. Призы для победителей включают эксклюзивный контент.</p>
+                            <a href="#" class="read-more">Читать дальше</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Новость 5 -->
+                    <div class="news-item" data-category="patches">
+                        <img src="../images/index-news-v7.jpg" alt="Исправление багов" class="news-img">
+                        <div class="news-content">
+                            <div class="news-date">28 сентября 2023</div>
+                            <h3 class="news-headline">Исправление багов</h3>
+                            <p class="news-excerpt">Вышел патч, исправляющий критические ошибки в версии 7.0. Улучшена стабильность и производительность игры.</p>
+                            <a href="#" class="read-more">Читать дальше</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Новость 6 -->
+                    <div class="news-item" data-category="tournaments">
+                        <img src="../images/index-news-tournament.jpg" alt="Результаты турнира" class="news-img">
+                        <div class="news-content">
+                            <div class="news-date">25 сентября 2023</div>
+                            <h3 class="news-headline">Результаты турнира</h3>
+                            <p class="news-excerpt">Подведены итоги последнего турнира по Mindustry. Победителем стал игрок под ником "FactoryMaster".</p>
+                            <a href="#" class="read-more">Читать дальше</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="guides.html">Гайды</a>
+                <a href="characters.html">Юниты</a>
+                <a href="media.html">Медиа</a>
+                <a href="community.html">Сообщество</a>
+            </nav>
+
+            <div class="footer-center">
+            <a href="https://store.steampowered.com/app/1127400/Mindustry/" target="_blank" rel="noopener noreferrer">
+                <img src="../images/mindustry-reign.gif" alt="Mindustry animation" class="footer-gif">
+            </a>
+            </div>
+
+            <div class="footer-contacts">
+                <p>Email: <a href="mailto:info@promindustry.ru">info@promindustry.ru</a></p>
+                <p>Discord: <a href="#">ProMindustryOfficial</a></p>
+                <p>GitHub: <a href="https://github.com/ProMindustry" target="_blank">ProMindustry</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Pro Mindustry. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/news.js"></script>
+    <script src="../JS/header.js"></script>
+</body>
+</html>

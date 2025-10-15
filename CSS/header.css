@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "Cornerita";
+    src: url(../fonts/Cornerita\ Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Cornerita";
+    src: url(../fonts/Cornerita\ Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    font-size: 1.8em;
+    font-family: 'Cornerita', sans-serif;
+    padding: 15px 4vw;
+    transition: 
+        padding 0.6s ease,
+        background-color 0.6s ease,
+        font-size 0.6s ease,
+        backdrop-filter 0.6s ease;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: #fff;
+    font-weight: 900;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.mindustry-logo {
+    width: 2.8em;
+    transition: transform 0.3s ease;
+}
+
+/* Анимация золотого блика */
+.logo:hover .mindustry-logo {
+    transform: scale(1.1);
+}
+
+.logo:hover {
+    color: transparent;
+    background: linear-gradient(45deg, 
+        #bf953f, 
+        #fcf6ba, 
+        #b38728, 
+        #fbf5b7, 
+        #aa771c);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: metal-shine 3s ease-in-out infinite;
+}
+
+@keyframes metal-shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Навигация */
+.nav-list {
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-list a {
+    color: #8f8f8f;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-list a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ffffff;
+}
+
+.nav-list a:hover::before {
+    width: 100%;
+}
+
+/* Состояние при прокрутке */
+header.shrink {
+    padding: 8px 8vw; /* делаем тоньше и раздвигаем logo/nav */
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    font-size: 1.6em;
+}
+
+/* =============================
+   АДАПТИВНЫЙ ХЕДЕР (ЧИСТЫЙ И РОВНЫЙ)
+   ============================= */
+.menu-toggle {
+    display: none;
+    position: relative;
+    width: 28px;
+    height: 22px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1101;
+}
+
+.menu-toggle span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.35s ease;
+}
+
+.menu-toggle span:nth-child(1) { top: 0; }
+.menu-toggle span:nth-child(2) { top: 9px; }
+.menu-toggle span:nth-child(3) { top: 18px; }
+
+/* Анимация крестика */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+/* ---------- Мобильное отображение ---------- */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+        padding: 10px 6vw;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        transform: translateY(-100%);
+        transition: transform 0.45s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1100;
+    }
+
+    .nav.open {
+        transform: translateY(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 2em;
+        font-size: 1.6em;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Чтобы при уменьшении (shrink) не ломалось меню */
+header.shrink .menu-toggle span {
+    background-color: #fff;
+}

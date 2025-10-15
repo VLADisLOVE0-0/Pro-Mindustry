@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Pro Mindustry</title>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo"><img src="images/mindustry-logo.png" alt="Логотип игры Mindustry" class="mindustry-logo">Pro Mindustry</a>
+
+        <button class="menu-toggle" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="pages/news.html">Новости</a></li>
+                <li class="nav-item"><a href="pages/guides.html">Гайды</a></li>
+                <li class="nav-item"><a href="pages/characters.html">Юниты</a></li>
+                <li class="nav-item"><a href="pages/media.html">Медиа</a></li>
+                <li class="nav-item"><a href="pages/community.html ">Сообщество</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="video/mindustry-hero-video.webm" type="video/webm">
+        Ваш браузер не поддерживает видео.
+    </video>
+
+    <div class="hero-overlay">
+        <img src="images/mindustry-logo.png" alt="Логотип Mindustry" class="hero-logo">
+        <h1 class="hero-title">Добро пожаловать в Mindustry</h1>
+        <p class="hero-description">Построй фабрики, защищай базы и захватывай ресурсы, отбиваясь от волн врагов.</p>
+        <a href="#about" class="hero-scroll-btn">
+            Узнать больше
+            <span class="arrow-down">▼</span>
+        </a>
+    </div>
+    </section>
+
+    <main>
+        <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>О игре Mindustry</h2>
+            <p class="about-text">
+            <strong>Mindustry</strong> — это уникальная инди-игра от <strong>Anuken</strong>, сочетающая элементы
+            строительства фабрик, автоматизации, башенной защиты и стратегии в реальном времени.  
+            Игрокам предстоит строить сложные производственные цепочки, добывать ресурсы, исследовать новые технологии 
+            и защищать свои базы от волн врагов на различных планетах.
+            </p>
+
+            <div class="about-gallery">
+            <img src="images/index-factory.webp" alt="Фабрика Mindustry">
+            <img src="images/index-battle.jpg" alt="Битва в Mindustry">
+            <img src="images/index-map.jpg" alt="Карта Mindustry">
+            </div>
+
+            <p class="about-text">
+            Mindustry активно развивается с 2017 года и полностью <strong>открыта для модификаций</strong>.  
+            Игра имеет кроссплатформенный мультиплеер, редактор карт, мощный скриптовый API и огромную базу игроков.  
+            Разработка продолжается благодаря сообществу и поддержке игроков.
+            </p>
+
+            <div class="about-links">
+                <a href="https://mindustry.fandom.com/ru/wiki/Mindustry_7.0_Released" target="_blank" class="about-link">
+                    <img src="svg/news.svg" alt="" class="about-icon"> Последний релиз
+                </a>
+
+                <a href="https://store.steampowered.com/app/1127400/Mindustry/" target="_blank" class="about-link">
+                    <img src="svg/steam.svg" alt="" class="about-icon"> Поддержать разработчика
+                </a>
+
+                <a href="https://github.com/Anuken/Mindustry/releases" target="_blank" class="about-link">
+                    <img src="svg/repository.svg" alt="" class="about-icon"> Официальный репозиторий
+                </a>
+            </div>
+        </div>
+        </section>
+
+        <section id="news" class="news-section">
+            <div class="container">
+                <h2 class="news-title">Анонсы последних новостей</h2>
+                <div class="news-cards">
+                
+                <a href="pages/news.html" class="news-card">
+                    <img src="images/index-news-v7.jpg" alt="Новость 1" class="news-img">
+                    <div class="news-content">
+                    <h3 class="news-headline">Обновление Mindustry 7.0</h3>
+                    <p class="news-excerpt">Новая версия игры с расширенными возможностями и улучшенной графикой.</p>
+                    </div>
+                </a>
+
+                <a href="pages/news.html" class="news-card">
+                    <img src="images/index-news-map&mods.png" alt="Новость 2" class="news-img">
+                    <div class="news-content">
+                    <h3 class="news-headline">Новые карты и моды</h3>
+                    <p class="news-excerpt">Сообщество добавило несколько интересных карт и модификаций.</p>
+                    </div>
+                </a>
+
+                <a href="pages/news.html" class="news-card">
+                    <img src="images/index-news-guide-auto.webp" alt="Новость 3" class="news-img">
+                    <div class="news-content">
+                    <h3 class="news-headline">Гайд по автоматизации</h3>
+                    <p class="news-excerpt">Пошаговое руководство для создания эффективных фабрик и обороны.</p>
+                    </div>
+                </a>
+
+                <a href="pages/news.html" class="news-card">
+                    <img src="images/index-news-tournament.jpg" alt="Новость 4" class="news-img">
+                    <div class="news-content">
+                    <h3 class="news-headline">Сообщество и турниры</h3>
+                    <p class="news-excerpt">Анонсы соревнований и событий для игроков Mindustry.</p>
+                    </div>
+                </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="quick-access" class="quick-access-section">
+            <div class="reviews-bg">
+                <div class="review-layer layer1">
+                <span>«Спасибо за удивительную игру!»</span>
+                <span>«Mindustry вдохновляет на новые стратегии»</span>
+                <span>«Люблю автоматизировать свои фабрики»</span>
+                </div>
+                <div class="review-layer layer2">
+                <span>«Сообщество очень дружелюбное и активное»</span>
+                <span>«Спасибо разработчикам за постоянные обновления!»</span>
+                <span>«Стратегия и автоматизация в одном»</span>
+                </div>
+                <div class="review-layer layer3">
+                <span>«Каждое обновление улучшает игру»</span>
+                <span>«Игра держит в напряжении!»</span>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="quick-access-title">Быстрый доступ</h2>
+                <div class="quick-cards">
+
+                <a href="pages/news.html" class="quick-card">
+                    <h3 class="card-title">Новости</h3>
+                    <p class="card-description">Последние обновления, анонсы и события игры Mindustry.</p>
+                </a>
+
+                <a href="pages/guides.html" class="quick-card">
+                    <h3 class="card-title">Гайды</h3>
+                    <p class="card-description">Подробные инструкции и советы по стратегиям и автоматизации.</p>
+                </a>
+
+                <a href="pages/characters.html" class="quick-card">
+                    <h3 class="card-title">Юниты</h3>
+                    <p class="card-description">Обзор всех юнитов, их возможностей и применения в боях.</p>
+                </a>
+
+                <a href="pages/media.html" class="quick-card">
+                    <h3 class="card-title">Медиа</h3>
+                    <p class="card-description">Скриншоты, арты, видео и другие материалы по игре.</p>
+                </a>
+
+                <a href="pages/community.html" class="quick-card">
+                    <h3 class="card-title">Сообщество</h3>
+                    <p class="card-description">Форумы, Discord и фан-сообщество Mindustry.</p>
+                </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="pages/news.html">Новости</a>
+                <a href="pages/guides.html">Гайды</a>
+                <a href="pages/characters.html">Юниты</a>
+                <a href="pages/media.html">Медиа</a>
+                <a href="pages/community.html">Сообщество</a>
+            </nav>
+
+            <div class="footer-center">
+            <a href="https://store.steampowered.com/app/1127400/Mindustry/" target="_blank" rel="noopener noreferrer">
+                <img src="images/mindustry-reign.gif" alt="Mindustry animation" class="footer-gif">
+            </a>
+            </div>
+
+            <div class="footer-contacts">
+                <p>Email: <a href="mailto:info@promindustry.ru">info@promindustry.ru</a></p>
+                <p>Discord: <a href="#">ProMindustryOfficial</a></p>
+                <p>GitHub: <a href="https://github.com/ProMindustry" target="_blank">ProMindustry</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Pro Mindustry. Все права защищены.</p>
+        </div>
+    </footer>
+
+
+    <script src="JS/header.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>

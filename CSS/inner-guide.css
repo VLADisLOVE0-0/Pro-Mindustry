@@ -1,0 +1,199 @@
+.guide-page {
+    margin-top: 80px;
+    background: radial-gradient(circle at center, #111 0%, #0a0a0a 100%);
+    color: #fff;
+    font-family: 'Cornerita', sans-serif;
+    line-height: 1.7;
+}
+
+/* ===== ОБЛОЖКА ===== */
+.guide-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.guide-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.guide-hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+}
+
+.guide-title {
+    font-size: 2.8em;
+    font-weight: 900;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #bf953f, #fcf6ba, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 25px rgba(255,215,0,0.2);
+}
+
+.guide-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: #ccc;
+}
+
+.guide-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.guide-tags span {
+    background: rgba(255,215,0,0.2);
+    border: 1px solid rgba(255,215,0,0.3);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+/* ===== КОНТЕНТ ===== */
+.guide-content {
+    max-width: 850px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.guide-content h2 {
+    font-size: 2em;
+    font-weight: 900;
+    color: #ffd700;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.guide-content h3 {
+    font-size: 1.4em;
+    color: #fcf6ba;
+    margin-top: 30px;
+}
+
+.guide-content p {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+.guide-content blockquote {
+    background: rgba(255, 215, 0, 0.08);
+    border-left: 4px solid #ffd700;
+    padding: 15px 20px;
+    border-radius: 6px;
+    color: #fff;
+    font-style: italic;
+    margin: 25px 0;
+}
+
+.guide-image {
+    width: 100%;
+    border-radius: 12px;
+    margin: 25px 0 40px;
+    border: 2px solid rgba(255,215,0,0.25);
+    box-shadow: 0 0 20px rgba(255,215,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+.guide-image:hover {
+    transform: scale(1.02);
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.guide-navigation {
+    max-width: 950px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #ffd700;
+}
+
+.next-guides h3 {
+    font-size: 1.6em;
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: #ffd700;
+}
+
+.next-guides-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.next-guide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1a1a1a;
+    border: 2px solid rgba(255,215,0,0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #fff;
+}
+
+.next-guide-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(255,215,0,0.4);
+    border-color: #ffd700;
+}
+
+.next-guide-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.next-guide-card span {
+    padding: 10px;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 768px) {
+    .guide-title {
+        font-size: 2em;
+    }
+    .guide-content {
+        margin: 60px auto;
+    }
+    .guide-content h2 {
+        font-size: 1.6em;
+    }
+    .guide-content p {
+        font-size: 1em;
+    }
+}
